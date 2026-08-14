@@ -1,0 +1,15 @@
+{
+  "name": "@local-rig/mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local tool-only MCP server for the Local Rig controller.",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.76"
+  }
+}
