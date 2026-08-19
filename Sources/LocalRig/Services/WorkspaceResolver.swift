@@ -19,6 +19,14 @@ struct WorkspaceResolver: Sendable {
         )))
         candidates.append(
             fileManager.homeDirectoryForCurrentUser
+                .appendingPathComponent("Documents/rheos-repos", isDirectory: true)
+        )
+        candidates.append(
+            fileManager.homeDirectoryForCurrentUser
+                .appendingPathComponent("Developer/rheos-repos", isDirectory: true)
+        )
+        candidates.append(
+            fileManager.homeDirectoryForCurrentUser
                 .appendingPathComponent("Documents/ALDR Ltd/Rheos/Code/rheos-repos", isDirectory: true)
         )
 
