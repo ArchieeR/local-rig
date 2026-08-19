@@ -11,7 +11,7 @@ Running multiple local git worktrees or feature branches simultaneously usually 
 ## 1. What is a "Rig"?
 
 A **Rig** is a lightweight developer slot that couples:
-1. **A Frontend Dev Server** (e.g. Next.js on `:3000`, `:3001`, `:3002`) bound to a specific git worktree / feature branch.
+1. **A Frontend Dev Server** (e.g. Rig 1 on `:3000`, Rig 2 on `:3001`, Rig 3 on `:3002`) bound to a specific git worktree / feature branch.
 2. **An Emulator Strategy** (Shared or Isolated Firebase Emulators).
 3. **Session Ownership** (Claimed by a specific developer, agent, or terminal task).
 
@@ -21,7 +21,7 @@ A **Rig** is a lightweight developer slot that couples:
   │                                                         │
   │  ┌──────────────────────┐     ┌──────────────────────┐  │
   │  │ Rig 1 (wt-qa-rig)    │     │ Rig 2 (wt-rig2)      │  │
-  │  │ Next.js on :3000     │     │ Next.js on :3002     │  │
+  │  │ Next.js on :3000     │     │ Next.js on :3001     │  │
   │  └──────────┬───────────┘     └──────────┬───────────┘  │
   │             │                            │              │
   │             │   ┌────────────────────────┘              │
@@ -46,7 +46,7 @@ Local Rig gives you two modes:
 * **Why use it:** Instant startup for Rigs 2–5. Saves 6–10 GB of RAM across multiple concurrent feature branches. Great for UI work, frontend QA, and rapid iteration against a single shared test dataset.
 
 ### Mode B: Isolated Emulator
-* **How it works:** Rig 2 (or 3, 4, 5) boots its **own independent Firebase Emulator stack** on isolated port offsets (e.g. Firestore `:8082`, Auth `:9092`).
+* **How it works:** Rig 2 (or 3, 4, 5) boots its **own independent Firebase Emulator stack** with isolated port offsets (e.g. Firestore `:8081`, Auth `:9098` for Rig 2).
 * **Why use it:** Perfect for destructive migration testing, Cloud Function schema refactorings, or automated test runs where you don't want to dirty the shared test data.
 
 ---
