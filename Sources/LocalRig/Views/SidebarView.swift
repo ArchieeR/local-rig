@@ -14,6 +14,15 @@ struct SidebarView: View {
                 }
             }
         )) {
+            Section {
+                SidebarDestinationRow(
+                    title: "Home",
+                    detail: "Dashboard overview",
+                    systemImage: "house"
+                )
+                .tag(SidebarSelection.home)
+            }
+
             Section("Workspace") {
                 SidebarDestinationRow(
                     title: "Rigs",

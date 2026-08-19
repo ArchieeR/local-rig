@@ -16,7 +16,7 @@ enum PreferenceKeys {
 @MainActor
 final class RigStore: ObservableObject {
     @Published private(set) var snapshot: DashboardSnapshot?
-    @Published var sidebarSelection: SidebarSelection = .rigs
+    @Published var sidebarSelection: SidebarSelection = .home
     @Published private(set) var isRefreshing = false
     @Published private(set) var busyRigIDs: Set<Int> = []
     @Published private(set) var cleaningSessionIDs: Set<String> = []
@@ -84,7 +84,7 @@ final class RigStore: ObservableObject {
     var isMachineSelected: Bool {
         switch sidebarSelection {
         case .runtime: true
-        case .localModels, .rigs, .devServers, .mcps, .rig: false
+        case .home, .localModels, .rigs, .devServers, .mcps, .rig: false
         }
     }
     var isLocalModelSelected: Bool { sidebarSelection == .localModels }

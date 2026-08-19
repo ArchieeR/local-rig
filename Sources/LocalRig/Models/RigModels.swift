@@ -1,6 +1,7 @@
 import Foundation
 
 enum SidebarSelection: Hashable, Sendable {
+    case home
     case runtime
     case localModels
     case rigs

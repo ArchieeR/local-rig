@@ -10,6 +10,8 @@ struct ContentView: View {
         } detail: {
             if let snapshot = store.snapshot {
                 switch store.sidebarSelection {
+                case .home:
+                    HomeOverviewView(store: store, snapshot: snapshot)
                 case .runtime:
                     AgentRuntimeView(store: store, snapshot: snapshot)
                 case .localModels:
