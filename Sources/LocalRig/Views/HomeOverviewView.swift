@@ -79,7 +79,7 @@ struct HomeOverviewView: View {
             metricCard(
                 title: "Memory Pressure",
                 value: memory.pressureStatus,
-                detail: "\(RigFormatters.memory(memory.physicalOccupiedBytes)) / \(RigFormatters.memory(memory.totalBytes))",
+                detail: "\(RigFormatters.memory(memory.physicalOccupiedBytes)) occupied · Wired: \(RigFormatters.memory(memory.wiredBytes))",
                 systemImage: "memorychip",
                 tint: memory.pressureStatus == "Normal" ? .green : .orange
             )

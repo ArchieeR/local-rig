@@ -7,6 +7,7 @@ contracts rather than replacing their process-safety rules.
 
 ## What it shows
 
+- **Firebase Developer Suite:** A clear explanation of [Local Rigs & Firebase Emulators](docs/FIREBASE_EXPLAINER.md) for running multi-worktree frontends against shared or isolated emulators without port collisions.
 - A developer Activity Monitor for Codex and Claude task cohorts, MCP servers,
   workspace Node processes, CPU, RAM, ports, age, and repository attribution
 - Conservative stale-process candidates, with an attention-only filter and a
