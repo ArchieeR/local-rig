@@ -1,3 +1,5 @@
+![Local Rig](docs/github-social-preview.jpg)
+
 # Local Rig
 
 A small native macOS dashboard for local development rigs, agent runtimes,
